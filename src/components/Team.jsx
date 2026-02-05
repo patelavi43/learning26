@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export const Teams = () => {
   const teams = [
+    "gt",
     "csk",
     "mi",
-    "gt",
     "rcb",
     "kkr",
     "rr",
