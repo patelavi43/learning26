@@ -1,7 +1,7 @@
 import React from "react";
 
 import aviImg from "../assets/image/avi.jpeg";
-import krupaliImg from "..\assets\image\avi.jpeg";
+import krupaliImg from "../assets/image/avi.jpeg";
 
 export const MapDemo7 = () => {
   const employees = [

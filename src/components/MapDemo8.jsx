@@ -2,7 +2,7 @@ import React from "react";
 
 // ✅ import images from src/assets/image
 import aviImg from "../assets/image/avi.jpeg";
-import krupaliImg from "../assets/image/krupali.jpeg";
+import krupaliImg from "../assets/image/avi.jpeg";
 
 export const MapDemo8 = () => {
   const students = [
