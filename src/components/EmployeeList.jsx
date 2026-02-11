@@ -5,7 +5,7 @@ import { SubEmployeeList } from "./SubEmployeeList";
 export const EmployeeList = ({ title, company, employees }) => {
   return (
     <div className="container mt-4">
-      <h1 className="text-center">Employees</h1>
+      
       <h2 className="text-center">EmployeeList</h2>
 
       <h3 className="text-center">{title}</h3>
