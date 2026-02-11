@@ -30,6 +30,7 @@ import { TeamDetail } from "./components/TeamDetail";
 import { UseStateDemo1 } from "./components/UseStateDemo1";
 import { UseStateDemo2 } from "./components/UseStateDemo2";
 import { UseStateDemo3 } from "./components/UseStateDemo3";
+import { Employees } from "./components/Employees";
 
 
 
@@ -56,6 +57,7 @@ function App() {
           <Route path="/usestatedemo1" element ={<UseStateDemo1 />} />
           <Route path="/usestatedemo2" element ={<UseStateDemo2 />} />
           <Route path="/usestatedemo3" element ={<UseStateDemo3 />} />
+          <Route path="/employees" element ={<Employees />} />
         </Routes>
        </div>
 
