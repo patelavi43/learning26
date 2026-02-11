@@ -1,7 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-//import './App.css'
 import { HeaderComponent } from "./components/HeaderComponent";
 import { FooterComponent } from "./components/FooterComponent";
 import ContentComponent from "./components/ContentComponent";
@@ -35,6 +34,9 @@ import { UserForm } from "./components/UserForm";
 import { InputDemo1 } from "./components/input/InputDemo1";
 import { InputDemo2 } from "./components/input/InputDemo2";
 import { FormDemo1 } from "./components/form/FormDemo1";
+import { FormDemo2 } from "./components/form/FormDemo2";
+import { FormDemo3 } from "./components/form/FormDemo3";
+import { FormDemo4 } from "./components/form/FormDemo4";
 
 
 function App() {
@@ -47,14 +49,14 @@ function App() {
       <div >
         <Routes>
           <Route path="/netflixhome" element={<NetflixHome />} />
-          <Route path="/netflixanime" element={<NetflixAnime />} />
-          <Route path="/netflixshow" element={<NetflixShow />} />
+          {/* <Route path="/netflixanime" element={<NetflixAnime />} />
+          <Route path="/netflixshow" element={<NetflixShow />} /> */}
           <Route path="/" element = {<HomeComponent/>}></Route>
           <Route path="*" element={<h1 style={{textAlign:"center"}}>404 Not Found</h1>}></Route>
-          <Route path="/netflixaction" element={<NetflixAction />} />
+          {/* <Route path="/netflixaction" element={<NetflixAction />} />
           <Route path="/netflixhorror" element={<NetflixHorror />} />
           <Route path="/watch/:name" element={<Watch />} />
-          <Route path="/netflixmovies" element={<NetflixMovies />} />
+          <Route path="/netflixmovies" element={<NetflixMovies />} /> */}
           <Route path="/teams" element={<Teams />} />
           <Route path="/teamdetail/:teamName" element={<TeamDetail />} />
           <Route path="/usestatedemo1" element ={<UseStateDemo1 />} />
@@ -63,8 +65,12 @@ function App() {
           <Route path="/employees" element ={<Employees />} />
           <Route path="/userform" element={<UserForm />} />
           <Route path="/inputdemo1" element = {<InputDemo1/>}></Route>
-        <Route path="/inputdemo2" element = {<InputDemo2/>}></Route>
-        <Route path="/formdemo1" element = {<FormDemo1/>}></Route>
+          <Route path="/inputdemo2" element = {<InputDemo2/>}></Route>
+          <Route path="/formdemo1" element = {<FormDemo1/>}></Route>
+          <Route path="/formdemo2" element={<FormDemo2 />} />
+          <Route path="/formdemo3" element={<FormDemo3 />} />
+          <Route path="/formdemo4" element={<FormDemo4 />} />
+
         </Routes>
        </div>
 
