@@ -1,42 +1,37 @@
-import React from 'react'
-import { SubEmployeeList } from './SubEmployeeList'
+// src/components/EmployeeList.jsx
+import React from "react";
+import { SubEmployeeList } from "./SubEmployeeList";
 
-export const EmployeeList = (props) => {
-  console.log("emplist ",props)
-  //props --> property
-  //props -->keyeord  no
-  //props --> datatype -->object
-  //props -- {title:"...."}
-  //updated -->{title:"",compnay:{}}
-  //updated -->{title:"",compnay:{},employees:[{}]}
+export const EmployeeList = ({ title, company, employees }) => {
   return (
-    <div style={{textAlign:"center"}}>
-        <h1>EmployeeList</h1>
-        {props.title}
-        <h1>{props.company.name}</h1>
-        <h1>{props.company.year}</h1>
-        <table className='table'>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>NAME</th>
-              <th>AGE</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              props.employees.map((emp)=>{
-                return <tr>
-                  <td>{emp.id}</td>
-                  <td>{emp.name}</td>
-                  <td>{emp.age}</td>
-                </tr>
-              })
-            }
-          </tbody>
-        </table>
+    <div className="container mt-4">
+      <h1 className="text-center">Employees</h1>
+      <h2 className="text-center">EmployeeList</h2>
 
-        <SubEmployeeList title = {props.title}></SubEmployeeList>
+      <h3 className="text-center">{title}</h3>
+      <h3 className="text-center">{company.name}</h3>
+      <h3 className="text-center">{company.year}</h3>
+
+      <table className="table table-striped mt-4">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+          </tr>
+        </thead>
+        <tbody>
+          {employees.map((emp) => (
+            <tr key={emp.id}>
+              <td>{emp.id}</td>
+              <td>{emp.name}</td>
+              <td>{emp.age}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <SubEmployeeList employees={employees} />
     </div>
-  )
-}
+  );
+};

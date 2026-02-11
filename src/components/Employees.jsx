@@ -10,10 +10,10 @@ export const Employees = () => {
   };
 
   var employees = [
-    { id: 101, name: "parth", age: 23 },
-    { id: 102, name: "jay", age: 24 },
-    { id: 103, name: "raj", age: 25 },
-    { id: 104, name: "ajay", age: 23 },
+    { id: 101, name: "avi", age: 23 },
+    { id: 102, name: "raj", age: 24 },
+    { id: 103, name: "het", age: 25 },
+    { id: 104, name: "swar", age: 23 },
   ];
 
   return (
