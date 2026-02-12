@@ -37,6 +37,7 @@ import { FormDemo1 } from "./components/form/FormDemo1";
 import { FormDemo2 } from "./components/form/FormDemo2";
 import { FormDemo3 } from "./components/form/FormDemo3";
 import { FormDemo4 } from "./components/form/FormDemo4";
+import { FormDemo5 } from "./components/form/FormDemo5";
 
 
 function App() {
@@ -57,12 +58,12 @@ function App() {
           <Route path="/netflixhorror" element={<NetflixHorror />} />
           <Route path="/watch/:name" element={<Watch />} />
           <Route path="/netflixmovies" element={<NetflixMovies />} /> */}
-          <Route path="/teams" element={<Teams />} />
+          {/* <Route path="/teams" element={<Teams />} />
           <Route path="/teamdetail/:teamName" element={<TeamDetail />} />
           <Route path="/usestatedemo1" element ={<UseStateDemo1 />} />
           <Route path="/usestatedemo2" element ={<UseStateDemo2 />} />
           <Route path="/usestatedemo3" element ={<UseStateDemo3 />} />
-          <Route path="/employees" element ={<Employees />} />
+          <Route path="/employees" element ={<Employees />} /> */}
           <Route path="/userform" element={<UserForm />} />
           <Route path="/inputdemo1" element = {<InputDemo1/>}></Route>
           <Route path="/inputdemo2" element = {<InputDemo2/>}></Route>
@@ -70,6 +71,7 @@ function App() {
           <Route path="/formdemo2" element={<FormDemo2 />} />
           <Route path="/formdemo3" element={<FormDemo3 />} />
           <Route path="/formdemo4" element={<FormDemo4 />} />
+          <Route path="/formdemo5" element={<FormDemo5 />} />
 
         </Routes>
        </div>
