@@ -28,7 +28,6 @@ export const ApiDemo1 = () => {
 
       <p>{message}</p>
 
-      {/* Table for users */}
       <table border="1" style={{margin:"auto", marginTop:"20px"}}>
         <thead>
           <tr>
@@ -36,7 +35,7 @@ export const ApiDemo1 = () => {
             <th>Full name</th>
             <th>Email</th>
             <th>Age</th>
-            {/* add more columns if available */}
+            
           </tr>
         </thead>
         <tbody>
