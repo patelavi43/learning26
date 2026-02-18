@@ -41,6 +41,10 @@ import { FormDemo5 } from "./components/form/FormDemo5";
 import { FormDemo6 } from "./components/form/FormDemo6";
 import { FormDemo7 } from "./components/form/FormDemo7";
 import { ApiDemo1 } from "./components/api/ApiDemo1";
+import { OmdbSearch } from "./components/api/OmdbSearch";
+import { ApiDemo2 } from "./components/api/ApiDemo2";
+import { ApiDemo3 } from "./components/api/ApiDemo3";      // NEW
+import { MovieDetail } from "./components/api/MovieDetail";
 
 function App() {
 
@@ -66,7 +70,7 @@ function App() {
           <Route path="/usestatedemo2" element ={<UseStateDemo2 />} />
           <Route path="/usestatedemo3" element ={<UseStateDemo3 />} />
           <Route path="/employees" element ={<Employees />} /> */}
-          <Route path="/userform" element={<UserForm />} />
+          {/* <Route path="/userform" element={<UserForm />} />
           <Route path="/inputdemo1" element = {<InputDemo1/>}></Route>
           <Route path="/inputdemo2" element = {<InputDemo2/>}></Route>
           <Route path="/formdemo1" element = {<FormDemo1/>}></Route>
@@ -75,8 +79,12 @@ function App() {
           <Route path="/formdemo4" element={<FormDemo4 />} />
           <Route path="/formdemo5" element={<FormDemo5 />} />
           <Route path="/formdemo6" element={<FormDemo6 />} />
-          <Route path="/formdemo7" element={<FormDemo7 />} />
+          <Route path="/formdemo7" element={<FormDemo7 />} /> */}
           <Route path="/apidemodemo1" element={<ApiDemo1 />} />
+          <Route path="/apidemo2" element={<ApiDemo2 />} />
+          <Route path="/apidemo3" element={<ApiDemo3 />} />      {/* NEW */}
+          <Route path="/omdb" element={<OmdbSearch />} />
+          <Route path="/movie/:imdbid" element={<MovieDetail />} />
         </Routes>
        </div>
 
