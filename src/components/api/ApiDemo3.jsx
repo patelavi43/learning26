@@ -1,4 +1,3 @@
-// src/components/api/ApiDemo3.jsx
 import axios from "axios";
 import React, { useState } from "react";
 
@@ -7,27 +6,27 @@ export const ApiDemo3 = () => {
     name: "",
     email: "",
     age: "",
-    isActive: false,   // boolean in state
+    isActive: "true",   
     password: "",
   });
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value } = e.target;
     setForm((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value,  // checkbox → true/false [web:71]
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // payload sent to API – isActive is boolean
     const payload = {
       name: form.name,
       email: form.email,
       age: Number(form.age),
-      isActive: form.isActive,   // true / false
+      // convert string to real boolean
+      isActive: form.isActive === "true", 
       password: form.password,
     };
 
@@ -35,7 +34,7 @@ export const ApiDemo3 = () => {
       const res = await axios.post(
         "https://node5.onrender.com/user/user/",
         payload
-      ); // axios sends JS object as JSON (booleans stay booleans) [web:64][web:66]
+      ); 
       console.log(res.data);
       alert("User created successfully");
     } catch (err) {
@@ -94,15 +93,30 @@ export const ApiDemo3 = () => {
           </label>
         </div>
 
+        {/* isActive with radio buttons */}
         <div style={{ marginBottom: "8px" }}>
-          <label>
-            Is Active:{" "}
+          <span>Is Active: </span>
+
+          <label style={{ marginRight: "10px" }}>
             <input
-              type="checkbox"
+              type="radio"
               name="isActive"
-              checked={form.isActive}      // binds to boolean
+              value="true"
+              checked={form.isActive === "true"}
               onChange={handleChange}
             />
+            {" "}True
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="isActive"
+              value="false"
+              checked={form.isActive === "false"}
+              onChange={handleChange}
+            />
+            {" "}False
           </label>
         </div>
 
